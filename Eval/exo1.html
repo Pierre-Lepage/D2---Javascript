@@ -1,0 +1,36 @@
+<!DOCTYPE html>  
+<html>
+<head>  
+  <meta charset=utf-8 />  
+  <title>Exercice 1</title>
+  
+</head>
+<body onload="Init()">   
+  <p><a id="google" type="text/html" hreflang="fr-fr" rel="nofollow" target="_self" href="http://www.google.fr">Google</a></p>
+  <p><a id="newlink" >un nouveau lien</a></p>
+  <button>Afficher</button>
+  
+  <script>
+    function Init() {
+      const button = document.querySelector('button');
+      button.addEventListener('click', () => {
+        const googleLink = document.getElementById('google');
+        const newLink = document.getElementById('newlink');
+
+        const googleAttrs = {
+          href: googleLink.getAttribute('href'),
+          hreflang: googleLink.getAttribute('hreflang'),
+          rel: googleLink.getAttribute('rel'),
+          target: googleLink.getAttribute('target'),
+          type: googleLink.getAttribute('type')
+        };
+
+        console.log('Google link attributes:');
+        console.log(googleAttrs);
+
+        newLink.href = 'https://www.youtube.com'; // modify the href attribute of the new link
+      });
+    }
+  </script>          
+</body>    
+</html>

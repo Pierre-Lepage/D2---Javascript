@@ -1,0 +1,41 @@
+<!DOCTYPE html>  
+<html>
+<head>  
+	<meta charset=utf-8 />  
+	<title>Exercice 5</title>  
+</head>
+<body>   
+	<h1>Exercice 5</h1>
+	<ul id="liste">
+		<li>Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+	</ul>
+	
+	<script>
+		// Récupérer l'élément de liste
+		let list = document.getElementById("liste");
+		
+		// Créer un nouvel élément de type item de liste
+		let listItem = document.createElement("li");
+		
+		// Créer un nouvel élément de type lien hypertexte
+		let link = document.createElement("a");
+		
+		// Définir l'attribut href du lien hypertexte
+		link.href = "https://www.youtube.com";
+		
+		// Créer un nœud de texte pour le texte du lien
+		let linkText = document.createTextNode("Item 4");
+		
+		// Ajouter le nœud de texte au lien hypertexte
+		link.appendChild(linkText);
+		
+		// Ajouter le lien hypertexte à l'item de liste
+		listItem.appendChild(link);
+		
+		// Ajouter l'item de liste à la liste
+		list.appendChild(listItem);
+	</script>
+</body>    
+</html>

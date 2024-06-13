@@ -1,0 +1,33 @@
+<!DOCTYPE html>  
+<html>
+  <head>  
+    <meta charset=utf-8 />  
+    <title>Exercice 3</title>  
+    
+  </head>
+  <body>   
+    <p id="text">Exercices en JavaScript</p>   
+    <div>  
+      <button id="jsstyle">Style</button>  
+    </div>  
+    <script>
+      // Récupérer l’élément bouton
+      var btn = document.querySelector("#jsstyle");
+
+      // Ajouter un événement click au bouton
+      btn.onclick = function() {
+        // Récupérer l’élément paragraphe
+        var para = document.querySelector("#text");
+
+        // Modifier la couleur du paragraphe en bleu 
+        para.style.color = "blue";
+
+        // Modifier la taille de la fonte en « 14pt » 
+        para.style.fontSize = "14pt";
+
+        // Modifier la famille de la fonte en « Comic Sans MS » 
+        para.style.fontFamily = "Comic Sans MS";
+      }
+    </script>
+  </body>    
+</html>
